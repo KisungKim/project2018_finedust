@@ -14,7 +14,7 @@ https://github.com/KisungKim/finedust_ver3
 >
 > **성균관대학교 재학중, 소비자가족학과/융합소프트웨어트랙SCSC 수강 중**
 >
-> ** Highly involved : 
+> * Highly involved : 
 >
 > - 전체 프로젝트 기획
 > - 시스템 설계
@@ -22,7 +22,7 @@ https://github.com/KisungKim/finedust_ver3
 > - 프로젝트 management
 > - Backend(Django, Mysql) 
 >
-> ** involved : 
+> * involved : 
 >
 > - Frontend(React)
 >
