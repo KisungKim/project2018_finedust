@@ -10,9 +10,7 @@ https://github.com/KisungKim/finedust_ver3
 > ### 프로젝트 주 개발 프레임워크 : React, Django2.0, Mysql
 > ### 프로젝트 주 개발 API : Daum Map API, 공공데이터포털 API(5종)
 > ### 프로젝트 참여 인원 : 
-> * 김기성
->
-> **성균관대학교 재학중, 소비자가족학과/융합소프트웨어트랙SCSC 수강 중**
+> #### 김기성 **성균관대학교 재학중, 소비자가족학과/융합소프트웨어트랙SCSC 수강 중**
 >
 > * Highly involved : 
 >
@@ -27,7 +25,8 @@ https://github.com/KisungKim/finedust_ver3
 > - Frontend(React)
 >
 > 깃허브 주소 : https://github.com/KisungKim
-> * 구양하
+>
+> #### 구양하
 >
 > 깃허브 주소 : 
 
