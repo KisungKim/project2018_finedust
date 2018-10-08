@@ -9,7 +9,9 @@ https://github.com/KisungKim/finedust_ver3
 > ###### 프로젝트 기간 : 8월 중순 ~ 진행 중 
 > ###### 프로젝트 참여 인원 : 
 > * 김기성
+>
 > **성균관대학교 재학중, 소비자가족학과/융합소프트웨어트랙SCSC 수강 중**
+>
 > 깃허브 주소 : https://github.com/KisungKim
 > * 구양하
 > 깃허브 주소 : 
