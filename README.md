@@ -24,15 +24,15 @@ FineDust(*가명*)
 
 <br/>
 
-> ## 프로젝트 주 개발 프레임워크
+> ## 주 개발 환경
 
 React, Django2.0, Mysql
 
 <br/>
 
-> ## 프로젝트 주 개발 API
+> ## 주 참고 API
 
-Daum Map API, 공공데이터포털 API(5종)
+Daum Map API(web), 공공데이터포털 API(5종), Naver Map API(rest)
 
 <br/>
 
