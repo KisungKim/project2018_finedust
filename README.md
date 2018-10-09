@@ -64,11 +64,11 @@ Daum Map API, 공공데이터포털 API(5종)
 
 > 자세한 내용은 아래의 주소를 참고하시면 됩니다.
 
-# Project User Requirments
+# Project Requirments
 
 > 자세한 내용은 아래의 주소를 참고하시면 됩니다.
 
-# Project System Requirements
+# Project Design Specification
 
 > 자세한 내용은 아래의 주소를 참고하시면 됩니다.
 
