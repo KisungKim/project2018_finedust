@@ -1,7 +1,7 @@
 #  Requirement Specification
 
 <br/>
-
+ 
 | 구분 | 항목 | 요약 |
 |:-----:|:-----:|:-----:|
 | 1 | 서론 | [들어가며](#preface)
@@ -63,8 +63,7 @@
 >
 > 최근 나이키 어플의 경우 조깅과 동시에 사용자가 운동한 구간을 저장해 피드에서 공유하거나 본인이 열람할 수 있는 서비스를 제공하고 있다. 이는 국가나 단체에서 제공하는 정적인 데이터보다는 개인이 만들어가는 데이터가 사용자의 관심을 더 유도할 수 있음을 유추할 수 있다 *(Company-Opportunity)*
 
-![image02](https://drive.google.com/uc?id=1IFosJV5LzJz88Khk4gYDCwrC5YY9EqlJ)
-
+<img src="https://drive.google.com/uc?id=1IFosJV5LzJz88Khk4gYDCwrC5YY9EqlJ" width="280px" height="600px"/>
 
 ## User Requirement Specification
 
