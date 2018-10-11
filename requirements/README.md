@@ -113,7 +113,7 @@
 | 내부 | 7 | [Page Rendering&Routing](#page-rendering-routing) | 페이지간 이동 및 페이지 렌더링 | 3, 6 |
 | 내부 | 8 | [Cron Update](#cron-update) | 정기적으로 데이터 갱신 | 1, 2, 4 |
 
-[image03](https://drive.google.com/uc?id=1ZioHPGayUj4klDVqMq65HoS6DhXjNN0W)
+![image03](https://drive.google.com/uc?id=1ZioHPGayUj4klDVqMq65HoS6DhXjNN0W)
 
 > #### Data storage
 > 데이터 저장소의 경우 서버를 활용한 외부 데이터 저장 데이터베이스를 활용한다. 대기환경, 산책/공원에 대한 정보 등 활용되는 모든 데이터를 저장한다.
