@@ -142,40 +142,107 @@
 
 ## System Requirement Specification
 
-> ### 프로젝트를 진행하면서 다음과 같은 비용이 예상된다.
+> ### 각 기능 항목들에 대한 설명은 activity diagram, sequence diagram, tabular description을 활용했습니다
 
-| 구분 | 세부내용 | 비고 | 산출비용 |
-|:-----:|:-----:|:-----:|:-----:|
-| 웹 서버 | AWS EC2 | 12개월 free tier 사용/ 추후 비용 예상 | 0(서버 구축 후 12개월) |
-| 인스턴스 | Ubuntu | 가상 이미지 | 0 |
-| 프레임워크 | 장고 | 백엔드 웹 프레임워크 | 0 |
-| 프레임워크 | 리액트 | 프론트엔드 라이브러리 | 0 |
-| 데이터베이스 | Mysql | 데이터베이스 | 0 |
-| 필수 데이터 | 공공데이터포털 | 대기환경 데이터 | 0 |
-| 필수 데이터 | 서울 열린 데이터광장 | 산책/공원 데이터 | 0 |
-| 팀 작업 환경 | 개인 노트북 | 보유 | 0 |
-| **계** ||| **0** |
+> ### Functional Requirements(기능적 요구사항)
+> #### 지역검색
+
+![image_search_gugun](https://drive.google.com/uc?id=1mSUStQSFyACpFPlDs7kCTcecB0FdEonX)
+
+| 항목 | 설명 |
+|:-----:|:-----|
+| 기능 | 지역검색 |
+| 입력 | gugun_name : 유저가 입력한 구의 이름 |
+| 출력 | gugun_list : 사용자 입력과 유사한 구의 리스트 |
+| 처리 | find mathcing gugun_name : 사용자의 입력과 유사한 구의 리스트를 실시간으로 갱신하여 출력 |
+| 조건 | - |
+
+<br/>
+
+>
+> #### 대기환경 정보 표출
+
+![image_show_air](https://drive.google.com/uc?id=1ZxajC999Szuq5uL4osW3os80mwzP5u-K)
+
+| 항목 | 설명 |
+|:-----:|:-----|
+| 기능 | 대기환경 정보 표출 |
+| 입력 | specific gugun_name : 정확한 행정상 구/군의 이름 |
+| 출력 | air_data : 미세먼지, 오존지수, 자외선지수, 이산화질소, 일산화탄소, 대기환경 등급에 대한 데이터 |
+| 처리 | find matching air_data : 사용자의 입력과 동일한 구의 대기환경 정보를 출력 |
+| 조건 | 유저가 gugun_name을 정확히 값으로 넘긴 경우에만 대기환경의 정보를 표출한다 |
+
+<br/>
+
+> #### 산책로/공원 정보 표출
+
+![image_show_sancheck](https://drive.google.com/uc?id=19Wj2o8UXSFxZ64xdhJXJ3IBGh4v28zPW)
+
+| 항목 | 설명 |
+|:-----:|:-----|
+| 기능 | 산책로/공원 정보 표출 |
+| 입력 | specific gugun_name : 정확한 행정상 구/군의 이름 |
+| 출력 | sancheck_data : 산책로/공원의 구분, 이름을 출력, 해당 위치를 지도에 출력 |
+| 처리 | request map obj : 다음 지도 api로부터 맵 객체 요청<br/>render sancheck data : 받아온 다음 지도 api에 산책로/공원 정보를 지도 api의 메소드를 활용해 그려냄을 의미 |
+| 조건 | 유저가 gugun_name을 정확히 값으로 넘긴 경우에만 산책로/공원 정보를 표출한다 |
+
+<br/>
+
+> #### 사용자 선호 산책로/공원 입력
+
+--image--
+
+| 항목 | 설명 |
+|:-----:|:-----|
+| 기능 | 설명 |
+| 입력 | 설명 |
+| 출력 | 설명 |
+| 처리 | 설명 |
+| 조건 | 설명 |
+
+<br/>
+
+> ### Non-functional Requirements(비기능적 요구사항)
+> #### Usability Requirement
+> 새로운 양식으로 다시 rendering되어야 하는 페이지는 2개로 한정한다. 
+>
+> #### Perfromance Requirement
+> concurrent requsts에 반응할 수 있는 라이브러리를 사용한다(예: axios)
+>
+> #### Environmental Requirement
+> css의 경우 css-grid와 flex를 이용하여 고객의 브라우저 크기 조작에 유연하게 대응할 수 있도록 한다
+>
+> #### Security Requirement
+> ip-address를 hasing하기 위한 hasing 메소드는 api를 이용한다.
 
 <br/>
 
 ## System models
 
-> ### 프로젝트 전제조건의 경우 예상 비용면에서 다룬 항목 이외에 팀원에 대한 내용을 다룬다 
->
-> 1. 프로젝트 진행 및 회의 참여에 대해 쉽게 조율이 가능한 팀원
-> 2. 본인의 개발 언어에 대한 기본적인 이해
-> 3. 프론트/백 중 하나 이상의 개발 프레임워크를 접해본 경험
-> 4. 웹 서버에 대해 배우고 배포하려는 열의
+> ### 각 기능 항목들에 대한 설명은 activity diagram, sequence diagram, tabular description을 활용했습니다
 
-#### 팀의 목표는 다음과 같다
+![image_server](https://drive.google.com/uc?id=15ALa9X-Pdsu4V_aICTll2dxhWRPLKYy4)
 
-| 항목 | As-Is | To-Be |
-|:-----:|:-----:|:-----:|
-| 프로젝트 참가자의 역량 | 프로젝트 참여 경험 없음 | 프로젝트의 1사이클에 대한 경험 |
-| 개발 경험 | 주체적으로 참여했던 프로젝트 부족 | 새로운 혹은 기존의 프레임워크/라이브러리를 경험 |
-| 개발 환경 | 단순한 소스코드를 완성하는 프로젝트만 경험 | 시스템 설계 및 소스코드의 작성부터 배포까지 경험 |
-| 개발 언어 | 프론트에 대한 지식 부족 | 프론트에 대한 개발 경험 |
- 
+| 항목 | 설명 |
+|:-----:|:-----:|
+| Use-case | 웹 페이지 접속 |
+| 설명 | 고객이 맨 처음 웹 페이지에 접속할 때  |
+| 입력 | 설명 |
+| 출력 | 설명 |
+| 비고 | 설명 |
+
+<br/>
+
+![image_showdetail](https://drive.google.com/uc?id=1pLtjm-VWITM08l7_eeHbSSqvhfGufX3c)
+
+| 항목 | 설명 |
+|:-----:|:-----:|
+| Use-case | 상세정보 표출 |
+| 설명 | 설명 |
+| 입력 | 설명 |
+| 출력 | 설명 |
+| 비고 | 설명 |
+
 <br/>
 
 ## Appendix
