@@ -231,7 +231,7 @@
 | 항목 | 설명 |
 |:-----:|:-----|
 | Use-case | 웹 페이지 접속 |
-| 설명 | 고객이 맨 처음 웹 페이지에 접속할 때 서버는 장고프레임웍에 메인 페이지를 요청한다. <br/>장고프레임웍은 해당 html을 호출하며, 이때 react code를 통해 생성된 <br/>js페이지가 rendering된다. |
+| 설명 | 고객이 맨 처음 웹 페이지에 접속할 때 서버는 장고프레임웍에 메인 페이지를 요청한다. <br/>장고프레임웍은 해당 html을 호출하며, 이때 react code를 통해 생성된 js페이지가 rendering된다. |
 | 입력 | reqMainPage(1) : 서버 도메인<br/>reqMainPage(2) : main페이지의 html을 호출하는 장고 url<br/>reqMainPage(3) : html페이지 안에서 build된 js파일명 |
 | 출력 | resMainPage : js 페이지 |
 | 비고 | - |
