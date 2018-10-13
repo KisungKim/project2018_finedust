@@ -25,7 +25,7 @@
 
 | 구분 | Modified Date | Explanation |
 |:-----:|:-----:|:-----:|
-| 1 | 2018.10.10 | 요구사항명세서 파일 초안 작성
+| 1 | 2018.10.13 | 요구사항명세서 파일 초안 작성
 
 <br/>
 
@@ -68,29 +68,31 @@
 ## User Requirement Specification
 
 > ### Functional Requirements(기능적 요구사항)
+
 > #### 지역검색
 > 지역 검색의 경우 동단위 이하가 아닌, 해당 구만의 정보를 받아 검색이 이루어지도록 한다. 사용자의 입력이 이루어지는 동안 사용자 입력과 유사한 구를 미리 리스틩해서 보여준다.
->
+
 > #### 대기환경 정보 표출
 > 대기환경 정보의 경우 사용자가 한눈에 알아볼 수 있도록 필요한 최소한의 요소만을 표출한다. 반드시 보여지는 대기환경 정보와(예를 들어 미세먼지 혹은 자외선지수) 사용자의 특정한 동작이 일어났을 때 표출되는 대기환경의 정보를(예를 들어 오존지수, 이산화질소, 일산화탄소 등) 구분한다.
->
+
 > #### 산책로/공원 표출
 > 산책로와 공원의 표출은 기존 공공데이터의 산책로/공원과 사용자들이 선호하는 산책로/공원 섹션이 구분되어야 한다. 
->
+
 > #### 사용자 선호 산책로/공원 입력
 > 사용자가 지도에서 본인이 선호하는 산책로나 공원 위치를 클릭하면 본인이 선호하는 산책로/공원의 입력이 완료된 것으로 확인한다.
 
 
 > ### Non-functional Requirements(비기능적 요구사항)
+
 > #### Usability Requirement
 > 차칫 표출되는 정보가 많아질 수 있다. 사이트에 접속하여 10초 내에 사용자가 원하는 정보를 바로 찾을 수 있도록 UI는 처음 시스템을 사용하는 사용자도 알아보기 쉽도록 구성되어야 한다. 또한 사용자가 웹앱의 기능을 이용할 때에 최소한의 노력만으로 기능을 이용할 수 있도록 앱을 만들어야 한다. 예를 들어 사용자 선호 산책로/공원 입력 시, 회원가입이나 자판의 입력 없이 단순한 동작만으로 입력이 가능해야 한다. 사용자가 페이지간의 이동을 최소한으로 유지하며 본인이 원하는 정보를 찾을 수 있도록 인터페이스가 구성되어야 한다. 
->
+
 > #### Perfromance Requirement
 > 해당 웹앱의 페이지가 그려지는 시간은 최대 3초를 넘어야 하지 않는다. 또한 사용자의 동작변경에 따른 페이지에서의 정보 표출은 끊기지 않고 부드럽게 진행되어야 한다.
->
+
 > #### Environmental Requirement
 > 어떠한 사용자의 브라우저 환경에서도 정보가 가려지는 일이 없어야 한다. 예를 들어 해당 윕앱을 사용하는 사용자의 브라우저 창의 크기에 따라 보여지는 정보의 레이아웃 또한 사용자가 한눈에 알아볼 수 있도록 변경되어야 한다.
->
+
 > #### Security Requirement
 > Business Goal인 재방문률을 계산하기 위해 접속 ip-address를 활용한다. 이때 database에 기록되는 정보는 ip-address의  hashing값을 저장하여 사용자의 아이피주소는 외부로 노출되거나 개발자가 열람할 수 없도록 한다. 본 사이트는 회원의 정보를 저장하지 않는다. 따라서 회원정보 관리에 대한 보안문제는 고려하지 않는다.
 
@@ -116,25 +118,25 @@
 
 > #### Data storage
 > 데이터 저장소의 경우 서버를 활용한 외부 데이터 저장 데이터베이스를 활용한다. 대기환경, 산책/공원에 대한 정보 등 활용되는 모든 데이터를 저장한다.
->
+
 > #### Data Api
 > 1차 데이터는 [공공데이터 포털](https://data.go.kr)에서 받아온다. 받아온 데이터를 가공하여 데이터베이스에 저장하는 과정에서 [네이버 지도 api](https://developers.naver.com/docs/map/tutorial/) 또한 활용한다. 
->
+
 > #### Map Api
 > 지도는 [다음 지도 api](http://apis.map.daum.net)를 활용한다.
->
+
 > #### Server
 > 서버의 경우 [AWS EC2](https://aws.amazon.com/ko/ec2/?sc_channel=PS&sc_campaign=acquisition_KR&sc_publisher=google&sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCompute%7CEC2%7CKR%7CEN%7CText&sc_content=ec2_e&sc_detail=aws%20ec2&sc_category=Compute&sc_segment=293634586493&sc_matchtype=e&sc_country=KR&s_kwcid=AL!4422!3!293634586493!e!!g!!aws%20ec2&ef_id=WpeEQQAABY-v9yyW:20181011095431:s)를 사용한다.
->
+
 > #### Data processing
 > 페이지에서 사용자가 요청한 정보를 처리하거나, 사용자가 입력한 정보를 받는 과정에서 활용된다. 데이터 저장소를 필요로 하며, 정보를 활용하는 각기 다른 시스템에 요구에 맞추어 정보의 형태를 가공해준다.
->
+
 > #### Page Request Response
 > 웹 페이지의 요청과 응답을 처리한다. 사용자가 웹 페이지를 요청했을 때, 서버로에 요청하여 받아 응답 페이지를 제공하거나, 페이지의 rendering과정에서 필요한 data들을 받아올 수 있도록 데이터 처리 시스템에 알려준다.
->
+
 > #### Page Rendering Routing
 > 사용자가 웹 페이지 내에서 이동하며 페이지 내의 정보들을 볼 수 있도록 가능하게 해준다. 지도를 활용해야 하는 경우 지도 api에 작업을 요청하며, 특정 페이지에서 사용자가 정보들을 요구했을 때 페이지 요청/응답 시스템에 필요한 데이터를 받아오기 위한 rest-framework-page를 요청한다.
->
+
 > #### Cron Update
 > 본 웹앱의 경우, 날짜별로 달라지는 대기환경을 보여주어야 하기 때문에 정보의 갱신이 필요하다. 크론 업데이트는 이를 위한 시스템이며 서버에 지정된 명령을 확인하고 데이터를 외부 api로부터 받아와 database에 저장한다. 
 
@@ -142,9 +144,10 @@
 
 ## System Requirement Specification
 
-> ### 각 기능 항목들에 대한 설명은 activity diagram, sequence diagram, tabular description을 활용했습니다
+#### 각 기능 항목들에 대한 설명은 activity diagram, sequence diagram, tabular description을 활용했습니다
 
-> ### Functional Requirements(기능적 요구사항)
+### Functional Requirements(기능적 요구사항)
+
 > #### 지역검색
 
 ![image_search_gugun](https://drive.google.com/uc?id=1mSUStQSFyACpFPlDs7kCTcecB0FdEonX)
@@ -159,7 +162,6 @@
 
 <br/>
 
->
 > #### 대기환경 정보 표출
 
 ![image_show_air](https://drive.google.com/uc?id=1ZxajC999Szuq5uL4osW3os80mwzP5u-K)
@@ -202,16 +204,17 @@
 
 <br/>
 
-> ### Non-functional Requirements(비기능적 요구사항)
+### Non-functional Requirements(비기능적 요구사항)
+
 > #### Usability Requirement
 > 새로운 양식으로 다시 rendering되어야 하는 페이지는 2개로 한정한다. 
->
+
 > #### Perfromance Requirement
 > concurrent requsts에 반응할 수 있는 라이브러리를 사용한다(예: axios)
->
+
 > #### Environmental Requirement
 > css의 경우 css-grid와 flex를 이용하여 고객의 브라우저 크기 조작에 유연하게 대응할 수 있도록 한다
->
+
 > #### Security Requirement
 > ip-address를 hasing하기 위한 hasing 메소드는 api를 이용한다.
 
@@ -219,46 +222,36 @@
 
 ## System models
 
-> ### 각 기능 항목들에 대한 설명은 activity diagram, sequence diagram, tabular description을 활용했습니다
+#### 각 기능 항목들에 대한 설명은 activity diagram, sequence diagram, tabular description을 활용했습니다
+
+> #### 웹 페이지 접속
 
 ![image_server](https://drive.google.com/uc?id=15ALa9X-Pdsu4V_aICTll2dxhWRPLKYy4)
 
 | 항목 | 설명 |
-|:-----:|:-----:|
+|:-----:|:-----|
 | Use-case | 웹 페이지 접속 |
-| 설명 | 고객이 맨 처음 웹 페이지에 접속할 때  |
-| 입력 | 설명 |
-| 출력 | 설명 |
-| 비고 | 설명 |
+| 설명 | 고객이 맨 처음 웹 페이지에 접속할 때 서버는 장고프레임웍에 메인 페이지를 요청한다. <br/>장고프레임웍은 해당 html을 호출하며, 이때 react code를 통해 생성된 <br/>js페이지가 rendering된다. |
+| 입력 | reqMainPage(1) : 서버 도메인<br/>reqMainPage(2) : main페이지의 html을 호출하는 장고 url<br/>reqMainPage(3) : html페이지 안에서 build된 js파일명 |
+| 출력 | resMainPage : js 페이지 |
+| 비고 | - |
 
 <br/>
+
+> #### 상세정보 
 
 ![image_showdetail](https://drive.google.com/uc?id=1pLtjm-VWITM08l7_eeHbSSqvhfGufX3c)
 
 | 항목 | 설명 |
-|:-----:|:-----:|
+|:-----:|:-----|
 | Use-case | 상세정보 표출 |
-| 설명 | 설명 |
-| 입력 | 설명 |
-| 출력 | 설명 |
-| 비고 | 설명 |
+| 설명 | 고객이 js페이지에서 특정 정보를 요청한 경우 react code에 따라 rendering페이지는 계속해서 갱신된다. <br/>만약 DataStorage의 정보가 필요한 경우, react code는 장고url을 호출하며 호출된 장고url은 <br/>장고view의 DataProcessing시스템을 호출한다. DataProcessing시스템은 DataStorage로 부터 정보를 받아와 <br/>이를 json객체로 파싱하여 다시 react code에 넘겨주게 된다. 만약 Map객체 내부에서 추가적인 메소드가 필요한 경우, <br/>react code는 daum map api의 라이브러리에서 해당 메소드를 불러와 정보를 표출한다. |
+| 입력 | reqRenderingComponent : 고객의 js페이지 조작을 통한 react-component의 변화<br/>reqInfoForRendering(1) : component rendering을 위해 필요한 정보를 제공해 줄 수 있는 장고url <br/>reqInfoForRendering(2) : 장고url에 필요한 정보를 제공해 줄 수 있는 장고view<br/>reqStoredData : 장고view에서 사용할 정보를 DataStorage에 요청해주는 mysql쿼리문 |
+| 출력 | resData : DataStorage로부터 응답받은 python class object<br/>resParsedInfo : 장고view에서 json형식으로 파싱된 데이터 |
+| 비고 | - |
 
 <br/>
 
 ## Appendix
-
-> ### 해당 프로젝트를 진행하면서 다음과 같은 산출물이 생성됩니다
-
-### 1. Product
-#### 웹 어플리케이션 : 해당 프로젝트가 목표로 하고 있는 web-app
-
-### 2. Source files
-#### 소스 파일 : 웹 어플리케이션의 구동에 관여하는 모든 소스 파일들
-#### Study library : 개발환경 구축을 위해 필요한 학습 내용들을 팀원과 공유하기 위해 만든 sample 소스 파일들
-
-### 3. Documents 
-#### Requirements : **web-app의 예상 사용자들(user)** 과 시스템을 개발하는 팀원의 관점에서 각각 서술되어야 하는 요구사항들
-#### Design Specification : 시스템을 설계하고 개발에 참여하는 모든 팀원의 관점에서 서술되어야 하는 요구사항들
-#### WorkFlow : 시스템을 설계하고 개발에 참여하는 팀원이 참고해야 할 프로젝트 흐름도
 
 <br/>
