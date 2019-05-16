@@ -105,7 +105,7 @@
 | 외부 | 1 | [Data Storage](#data-storage) | 데이터 저장소 | - |
 | 외부 | 2 | [Data Api](#data-api) | 데이터를 받아오기 위한 api source | - |
 | 외부 | 3 | [Map Api](#map-api) | 지도를 사용하기 위한 api | - |
-| 외부 | 4 | [Server](#server) | 웹앱이 구동하기 위한 메인 서버 | - |
+| ~~외부~~ | ~~4~~ | ~~[Server](#server)~~ | ~~웹앱이 구동하기 위한 메인 서버~~ | - |
 | 내부 | 5 | [Data Processing](#data-processing) | 시스템 간 데이터 처리 | 1 |
 | 내부 | 6 | [Page Request&Response](#page-request-response) | 웹 페이지의 요청과 응답을 처리 | 4, 5, 7|
 | 내부 | 7 | [Page Rendering&Routing](#page-rendering-routing) | 페이지간 이동 및 페이지 렌더링 | 3, 6 |
@@ -121,9 +121,6 @@
 
 > #### Map Api
 > 지도는 [다음 지도 api](http://apis.map.daum.net)를 활용한다.
-
-> #### Server
-> 서버의 경우 [AWS EC2](https://aws.amazon.com/ko/ec2/?sc_channel=PS&sc_campaign=acquisition_KR&sc_publisher=google&sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCompute%7CEC2%7CKR%7CEN%7CText&sc_content=ec2_e&sc_detail=aws%20ec2&sc_category=Compute&sc_segment=293634586493&sc_matchtype=e&sc_country=KR&s_kwcid=AL!4422!3!293634586493!e!!g!!aws%20ec2&ef_id=WpeEQQAABY-v9yyW:20181011095431:s)를 사용한다.
 
 > #### Data processing
 > 페이지에서 사용자가 요청한 정보를 처리하거나, 사용자가 입력한 정보를 받는 과정에서 활용된다. 데이터 저장소를 필요로 하며, 정보를 활용하는 각기 다른 시스템에 요구에 맞추어 정보의 형태를 가공해준다.
