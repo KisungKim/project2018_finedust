@@ -20,7 +20,14 @@ FineDust(*가명*)
 
 > ## 프로젝트 기간
 
-8월 중순 ~ 진행 중 
+> 2018년 8월 중순 프로젝트 시작(Frontend와 Backend 부문에서 필요한 내용 스터디, 웹앱에 Map Api적용 연습)
+>
+> 2018년 9월 말 ~ 2018년 1월 말 프로젝트 보류(2학기 수강 및 계절수업)
+>
+> 2019년 1월 프로젝트 재개(웹앱 화면 구성 기획 및 Frontend마무리)
+>
+> 2019년 3월 Frontend 웹앱 화면 구성 완료
+>
 
 <br/>
 
@@ -50,7 +57,7 @@ Daum Map API(web), 공공데이터포털 API(5종), Naver Map API(rest)
 >
 > **involved :** 
 >
-> - Frontend(React)
+> - Frontend(create-react-app)
 >
 > 깃허브 주소 : https://github.com/KisungKim
 >
